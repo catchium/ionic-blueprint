@@ -1,0 +1,7 @@
+{
+  "name": "blueprint",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

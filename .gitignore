@@ -1,0 +1,6 @@
+node_modules
+.angular/cache/
+.vscode/
+www
+.DS_Store
+Thumbs.db
