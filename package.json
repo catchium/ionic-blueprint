@@ -1,8 +1,8 @@
 {
   "name": "blueprint",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Lars Behrmann",
+  "homepage": "https://github.com/catchium/ionic-blueprint",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
