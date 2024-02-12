@@ -19,20 +19,47 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    title: 'HOME',
     path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+    title: 'HOME',
+    path: 'home',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomePageModule),
+  },
+  {
+    title: 'SETTINGS',
+    path: 'settings',
+    loadChildren: () =>
+      import('./pages/settings/settings.module').then(
+        (m) => m.SettingsPageModule
+      ),
+  },
+  {
+    title: 'LEGAL_NOTICE',
+    path: 'legal-notice',
+    loadChildren: () =>
+      import('./pages/legal-notice/legal-notice.module').then(
+        (m) => m.LegalNoticePageModule
+      ),
+  },
+  {
+    title: 'PRIVACY_POLICY',
+    path: 'contact-privacy',
+    loadChildren: () =>
+      import('./pages/contact-privacy/contact-privacy.module').then(
+        (m) => m.ContactPrivacyPageModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
