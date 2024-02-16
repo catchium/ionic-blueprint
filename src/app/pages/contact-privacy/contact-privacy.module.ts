@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { ContactPrivacyPageRoutingModule } from './contact-privacy-routing.module';
 
 import { ContactPrivacyPage } from './contact-privacy.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    ContactPrivacyPageRoutingModule
+    ContactPrivacyPageRoutingModule,
   ],
-  declarations: [ContactPrivacyPage]
+  declarations: [ContactPrivacyPage],
 })
 export class ContactPrivacyPageModule {}

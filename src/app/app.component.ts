@@ -15,6 +15,10 @@
  */
 
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from './shared/services/language.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -47,5 +51,16 @@ export class AppComponent {
       assetUrl: '',
     },
   ];
-  constructor() {}
+  constructor(
+    private platform: Platform,
+    private languageService: LanguageService
+  ) {
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.languageService.initAppLanguage();
+    });
+  }
 }
