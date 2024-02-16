@@ -40,3 +40,7 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.header-collapse-main ion-toolbar.in-toolbar ion-title {
+    opacity: 100 !important;
+}

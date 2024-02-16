@@ -1,7 +1,10 @@
 {
     "MENU": "Menu",
-    "HOME": "Start",
+    "HOME": "Home",
     "SETTINGS": "Settings",
     "PRIVACY_POLICY": "Privacy policy",
-    "LEGAL_NOTICE": "Legal notice"
+    "LEGAL_NOTICE": "Legal notice",
+    "LANGUAGE": "Language",
+    "GERMAN": "German",
+    "ENGLISH": "English"
 }

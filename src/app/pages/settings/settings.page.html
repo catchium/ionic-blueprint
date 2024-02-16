@@ -8,9 +8,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">settings</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label> {{ 'LANGUAGE' | translate }} </ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>{{ 'LANGUAGE' | translate }}</ion-label>
+      <ion-select
+        [(ngModel)]="lang"
+        (ionChange)="switchLanguage()"
+        cancelText="{{ 'CANCEL' | translate }}"
+        okText="{{ 'OK' | translate }}"
+      >
+        <ion-select-option
+          value="{{ language.locale }}"
+          menuClose
+          ion-item
+          *ngFor="let language of languages"
+        >
+          {{ language.language | translate }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-item-group>
 </ion-content>

@@ -3,5 +3,8 @@
     "HOME": "Start",
     "SETTINGS": "Einstellungen",
     "PRIVACY_POLICY": "Datenschutz",
-    "LEGAL_NOTICE": "Impressum"
+    "LEGAL_NOTICE": "Impressum",
+    "LANGUAGE": "Sprache",
+    "GERMAN": "Deutsch",
+    "ENGLISH": "Englisch"
 }
