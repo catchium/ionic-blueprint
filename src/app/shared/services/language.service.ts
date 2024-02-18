@@ -27,7 +27,7 @@ export class LanguageService {
   }
 
   initAppLanguage() {
-    this.storage.get('AppLanguageV1').then((appLanguage) => {
+    this.storage.get('AppLanguage').then((appLanguage) => {
       if (!appLanguage) {
         appLanguage = this.getBrowserLanguage();
       }
@@ -40,7 +40,7 @@ export class LanguageService {
 
   getAppLanguage(): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.storage.get('AppLanguageV1').then((appLanguage) => {
+      this.storage.get('AppLanguage').then((appLanguage) => {
         if (!appLanguage) {
           appLanguage = this.getBrowserLanguage();
         }

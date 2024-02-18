@@ -1,0 +1,25 @@
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+  <div class="slides">
+    
+    <div class="slide" *ngIf="slide===0">
+      <h2>{{ 'WELCOME' | translate }}</h2>
+      <h3>{{ 'LANGUAGE' | translate }}</h3>
+      <ion-list>
+        <ion-radio-group (ionChange)="switchLanguage()" [(ngModel)]="language">
+          <ion-item>
+            <ion-label>English</ion-label>
+            <ion-radio aria-label="English" slot="start" value="en" mode="md"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Deutsch</ion-label>
+            <ion-radio aria-label="Deutsch" slot="start" value="de" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+      <ion-button (click)="finish()" fill="clear"
+        >{{ 'CONTINUE' | translate }}
+        <ion-icon slot="end" name="arrow-forward"></ion-icon
+      ></ion-button>
+    </div>
+  </div>
+</ion-content>

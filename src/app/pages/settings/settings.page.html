@@ -13,8 +13,8 @@
       <ion-label> {{ 'LANGUAGE' | translate }} </ion-label>
     </ion-item-divider>
     <ion-item>
-      <ion-label>{{ 'LANGUAGE' | translate }}</ion-label>
       <ion-select
+        label="{{ 'LANGUAGE' | translate }}"
         [(ngModel)]="lang"
         (ionChange)="switchLanguage()"
         cancelText="{{ 'CANCEL' | translate }}"

@@ -24,7 +24,7 @@ export class SettingsPage implements OnInit {
       { locale: 'de', language: 'GERMAN' },
       { locale: 'en', language: 'ENGLISH' },
     ];
-    this.storage.get('AppLanguageV1').then((appLanguage) => {
+    this.storage.get('AppLanguage').then((appLanguage) => {
       if (appLanguage == null) {
         this.currentLanguage = this.languageService.getBrowserLanguage();
       } else {
@@ -36,33 +36,11 @@ export class SettingsPage implements OnInit {
 
   ngOnInit() {}
 
-  ionViewWillEnter() {
-    // this.settingsService
-    //   .findAll()
-    //   .then((data) => {
-    //     console.log('Settings loaded ', data);
-    //     this.settings = data;
-    //   })
-    //   .catch((error) => {
-    //     console.log('Error loading settings! ', error);
-    //     alert('Error loading settings! ' + error);
-    //   });
-  }
-
   switchLanguage() {
     console.log('Current language' + this.currentLanguage);
     if (this.currentLanguage != this.lang) {
-      this.storage.set('AppLanguageV1', this.lang);
-      //this.translateService.setDefaultLang(this.lang);
+      this.storage.set('AppLanguage', this.lang);
       this.translateService.use(this.lang);
-      // let setting = this.settings.get(SettingKeys.LANGUAGE);
-      // setting.val = this.lang;
-      // this.settingsService.update(setting).catch((error) => {
-      //   alert('Unexpedcted error ' + error);
-      // });
-      // setTimeout(() => {
-      //   window.location.reload();
-      // }, 250);
     }
   }
 }
